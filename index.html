@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="smartMirror">
+  <head>
+    <title>Mirror App</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div ng-controller="clockCtrl" class="clock">
+      <h1 id='time'>{{clock | date:'shortTime'}}</h1>
+      <h1>{{clock | date:'EEEE'}}</h1>
+      <h1>{{clock | date:'longDate'}}</h1>
+    </div>
+    <div class="forecast">
+      <div ng-controller="weatherCtrl" class="weather">
+        <h1 id="city">{{weather.data.name}}</h1>
+        <table>
+          <td><img ng-src="{{ getImage(weather.data.weather[0].description)}}" height="125" weidth="125"/></td>
+          <td><h1 id="temp">{{ (config.Metric? toCelsius(weather.data.main.temp_max): toFahrenheit(weather.data.main.temp_max))  | number: 0}} &deg;</h1><td>
+        </table>
+      </br>
+        <table id="week">
+          <tr ng-repeat='x in forecast.data.list' ng-if='($index + 6) % 8 == 0'>
+            <td>{{ formatDate(x.dt_txt) | date: 'EEE' }}</td>
+            <td><img ng-src="{{ getImage(x.weather[0].description)}}" height="50" weidth="50"/></td>
+            <td>{{ (config.Metric? toCelsius(x.main.temp_max): toFahrenheit(x.main.temp_max)) | number: 0 }} &deg;</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "Day": {
+    "broken clouds" : "assets/img/brokenclouds.png",
+    "clear sky" :"assets/img/day-clearsky.png",
+    "few clouds" : "assets/img/day-fewclouds.png",
+    "mist" : "assets/img/mist.png",
+    "scattered clouds" : "assets/img/scatteredclouds.png",
+    "overcast clouds" : "assets/img/scatteredclouds.png",
+    "snow" : "assets/img/snow.png",
+    "thunderstorm" : "assets/img/thunderstorm.png",
+    "light rain": "assets/img/day-rain.png"
+  },
+  "Night": {
+    "broken clouds": "assets/img/brokenclouds.png",
+    "clear sky" : "assets/img/night-clearsky.png",
+    "few clouds" : "assets/img/night-fewclouds.png",
+    "mist" : "assets/img/mist.png",
+    "scattered clouds" : "assets/img/scatteredclouds.png",
+    "overcast clouds" : "assets/img/scatteredclouds.png",
+    "snow" : "assets/img/snow.png",
+    "thunderstorm" : "assets/img/thunderstorm.png",
+    "light rain" : "assets/img/night-rain.png"
+  }
+}

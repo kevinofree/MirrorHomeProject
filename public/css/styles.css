@@ -1,0 +1,38 @@
+* {
+  color: white;
+  font-family: "Times";
+}
+.clock{
+    line-height: 0.5;
+    padding-left: 25px;
+    padding-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.forecast{
+  text-align:center;
+  padding-right: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#time, #temp{
+  font-size: 400%;
+  line-height: .1;
+}
+
+#week{
+  float: right;
+  font-size: 125%;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+#city{
+  font-size: 300%;
+}
+body {
+  background-color: black;
+}
